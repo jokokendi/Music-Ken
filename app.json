@@ -2,11 +2,11 @@
   "name": "Music Ken",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/kenkannih/Music-Ken",
+  "repository": "https://github.com/jokokendi/Music-Ken",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
-      "description": "Masukan String Session Pyrogram (P) untuk assistant yang naik ke VCG",
+      "description": "Masukan String Session Pyrogram (P) untuk assistant yang naik ke VCG dapatkan di @Stringdurhakabot",
       "required": true
     },
     "BOT_TOKEN": {
