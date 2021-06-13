@@ -27,7 +27,7 @@
 
 ### 💜 HEROKU
 
-<a href="https://heroku.com/deploy?template=https://github.com/kenkannih/Music-Ken"><img src="https://img.shields.io/badge/BUAT DIHEROKU-blue?style=for-the-badge&logo=heroku" /></a>
+<a href="https://heroku.com/deploy?template=https://github.com/jokokendi/Music-Ken"><img src="https://img.shields.io/badge/BUAT DIHEROKU-blue?style=for-the-badge&logo=heroku" /></a>
 
 ## VIA Repl.it
 Klik tombol dibawah untuk mengambil Pyrogram String Session Atau pilih p bukan t
@@ -57,17 +57,11 @@ $ python(3) -m MusicKen
 
 - `/play <song name>` - play song you requested
 - `/play <reply to audio>` - play replied file
-- `/dplay <song name>` - play song you requested via deezer
-- `/splay <song name>` - play song you requested via jio saavn
 - `/playlist` - Show now playing list
 - `/current` - Show now playing
 - `/song <song name>` - download songs you want quickly
 - `/search <query>` - search videos on youtube with details
-- `/deezer <song name>` - download songs you want quickly via deezer
-- `/saavn <song name>` - download songs you want quickly via saavn
 - `/video <song name>` - download videos you want quickly
-
-#### Admins only.
 - `/player` - open music player settings panel
 - `/pause` - pause song play
 - `/resume` - resume song play
@@ -115,4 +109,4 @@ DaisyXmusic is a modified version of [Callsmusic](https://github.com/callsmusic/
 - [ImJanindu](https://github.com/ImJanindu): 
 - [Laky](https://github.com/Laky-64) & [Andrew](https://github.com/AndrewLaneX): PyTgCalls
 - [Original Repo owners](https://github.com/suprojects/CallsMusic)
-
+- [KEN KAN](https://github.com/kenkannih/Music-Ken)
