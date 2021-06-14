@@ -4,7 +4,7 @@ import asyncio
 from MusicKen.config import SUDO_USERS as user
 
 @Client.on_message(filter.command([gcast]))
-async def user(client.message)
+async def bye(client.message)
   sent=0
   failed=0
   if message from_user.id in UserAlreadyParticipant:
