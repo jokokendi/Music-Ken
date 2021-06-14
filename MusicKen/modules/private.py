@@ -21,7 +21,7 @@ Saya Memiliki Banyak Fitur Praktis Seperti :
 ┣• Mendownload Lagu.
 ┣• Mencari Lagu Yang ingin di Putar atau di Download.
 ┗━━━━━━━━━━━━━━
-❃ Managed With ❤ By {OWNER}
+❃ Managed With ❤ By @{OWNER}
 ❃ Thanks To [KEN KAN](https://t.me/kenkanasw)
 ━━━━━━━━━━━━━━━
 Ingin Menambahkan {PROJECT_NAME} ke Grup Anda? Tambahkan Saya Ke Group Anda!
