@@ -1,13 +1,13 @@
 from pyrogram import Client, filter
 from pyrogram.errors import UserAlreadyParticipant
 import asyncio
-from MusicKen.config import SUDO_USERS as sudouser
+from MusicKen.config import SUDO_USERS
 
 @Client.on_message(filter.command([gcast]))
 async def bye(client, message):
   sent=0
   failed=0
-  if message from_user.id in sudouser:
+  if message from_user.id in SUDO_USERS:
     lol = await message_reply("`Sedang mengirim pesan global...`")
     if not message.reply_to_message:
       await lol.edit("**Balas pesan teks apa pun untuk gcast**")
