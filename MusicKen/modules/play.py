@@ -484,7 +484,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
                     InlineKeyboardButton("💬 GROUP", url=f"https://t.me/{SUPPORT_GROUP}"),
                 ],   
-                [InlineKeyboardButton("💌 CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")],
+                [InlineKeyboardButton("💌 CHANNEL", url=f"https://t.me/{updateschannel}")],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
         )
@@ -525,7 +525,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
                     InlineKeyboardButton("💬 GROUP", url=f"https://t.me/{SUPPORT_GROUP}"),
                 ],
-                [InlineKeyboardButton("💌 CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")],
+                [InlineKeyboardButton("💌 CHANNEL", url=f"https://t.me/{updateschannel}")],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
         )
