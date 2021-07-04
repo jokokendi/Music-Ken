@@ -1,6 +1,6 @@
 from os import path
 
-from youtube-dl import YoutubeDL
+from youtube_dl import YoutubeDL
 
 from MusicKen.config import DURATION_LIMIT
 from MusicKen.helpers.errors import DurationLimitError
