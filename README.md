@@ -9,20 +9,6 @@
 ### A bot that can play music on Telegram Group and Channel Voice Chats
 #### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
 
-<h2> Whats new 🔥 </h2>
-
-- This bot musik player language has been edited from English to Indonesian
-- Thumbnail Support
-- Playlist Support
-- Current playback support
-- Showing track names when skipping
-- Zero downtime, Fully Stable
-- DEEZER,YOUTUBE & SAAVN PLAYBACK SUPPORTED
-- Settings panel
-- Control with buttons
-- Userbot auto join
-- Channel Music Play
-
 
 
 ### 💜 HEROKU
@@ -71,21 +57,6 @@ $ python(3) -m MusicKen
 - `/userbotleave` - remove assistant from your chat
 - `/admincache` - Refresh admin list
 
-### Commands for Channel Music Play 🛠
-For linked group admins only:
-- `/cplay <song name>` - play song you requested
-- `/cplay <reply to audio>` - play replied file
-- `/cdplay <song name>` - play song you requested via deezer
-- `/csplay <song name>` - play song you requested via jio saavn
-- `/cplaylist` - Show now playing list
-- `/cccurrent` - Show now playing
-- `/cplayer` - open music player settings panel
-- `/cpause` - pause song play
-- `/cresume` - resume song play
-- `/cskip` - play next song
-- `/cend` - stop music play
-- `/userbotjoinchannel` - invite assistant to your chat
-* channel is also can be used instead of c
 
 
 ### Credits
