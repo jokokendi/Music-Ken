@@ -128,19 +128,15 @@ async def start(client: Client, message: Message):
     & filters.group
     & ~ filters.edited
 )
-async def help(client: Client, message: Message):
-    await message.reply_text(
-        """**Klik Tombol dibawah untuk Melihat Cara Menggunakan Bot**""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "📜 Cara Menggunakan BOT 📜", url="https://t.me/musikkuchannel"
-                    )
-                ]
-            ]
-        ),
-    )  
+def _help(client, message):
+    client.send_message(chat_id = message.chat.id,
+        text = tr.HELP_MSG[1],
+        parse_mode="markdown",
+        disable_web_page_preview=True,
+        disable_notification=True,
+        reply_markup = InlineKeyboardMarkup(map(1)),
+        reply_to_message_id = message.message_id
+    )
 
 
 @Client.on_message(
