@@ -1,4 +1,3 @@
-
 import json
 import os
 from os import path
@@ -569,7 +568,6 @@ async def play(_, message: Message):
                 message.from_user.mention()
             ),
         )
-        os.remove("final.png")
         return await lel.delete()
 
     os.remove("final.png")
