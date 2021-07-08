@@ -145,7 +145,7 @@ async def ghelp(_, message: Message):
             [
                 [
                     InlineKeyboardButton(text = '💬 GROUP 💬', url = f"t.me/{SUPPORT_GROUP}"),
-                    InlineKeyboardButton(text = '🔵 BANTUAN 🔵', text=f"tr.HELP_MSG[msg]")
+                    InlineKeyboardButton(text = '🔵 BANTUAN 🔵', text=f"{tr.HELP_MSG[msg]}")
                 ]
             ]
         ),
