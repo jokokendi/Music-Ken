@@ -2,7 +2,7 @@ import logging
 from MusicKen.modules.msg import Messages as tr
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from MusicKen.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME, OWNER
+from MusicKen.config import SOURCE_CODE, ASSISTANT_NAME, PROJECT_NAME, SUPPORT_GROUP, UPDATES_CHANNEL, BOT_USERNAME, OWNER
 logging.basicConfig(level=logging.INFO)
 
 @Client.on_message(
@@ -140,12 +140,12 @@ async def reload(client: Client, message: Message):
 @Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
-        f"""**🙋‍♀️ Hello Saya dapat memutar lagu di VCG atau OS Kalau mau tau cara penggunaan tekan tombol bantuan di bawah.**""",
+        text=tr.HELP_MSG[2],
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(text = '💬 GROUP 💬', url = f"t.me/{SUPPORT_GROUP}"),
-                    InlineKeyboardButton(text = '🔵 BANTUAN 🔵', text=f"{tr.HELP_MSG[msg]}")
+                    InlineKeyboardButton(text = '💌 CHANNEL 💌', text=f"t.me/{UPDATES_CHANNEL}")
                 ]
             ]
         ),
