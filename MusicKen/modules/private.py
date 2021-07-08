@@ -133,11 +133,7 @@ def map(pos):
             [InlineKeyboardButton(text = '📣 CHANNEL', url=f"https://t.me/{UPDATES_CHANNEL}"),
              InlineKeyboardButton(text = '💬 GROUP', url=f"https://t.me/{SUPPORT_GROUP}")],
 
-@Client.on_message(
-    filters.command("start")
-    & filters.group
-    & ~ filters.edited
-)
+@Client.on_message(filters.command("start") & filters.group & ~ filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_text(
         "💁🏻‍♂️ **Apakah Anda ingin mencari Link YouTube?**",
