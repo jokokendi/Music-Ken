@@ -137,4 +137,16 @@ async def reload(client: Client, message: Message):
             ]
         )
    )
-
+@Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
+async def ghelp(_, message: Message):
+    await message.reply_text(
+        f"""**🙋‍♀️ Hello Saya dapat memutar lagu di VCG atau OS Kalau mau tau cara penggunaan tekan tombol bantuan di bawah.**""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(text = '💬 GROUP 💬', url = f"t.me/{SUPPORT_GROUP}"),
+                    InlineKeyboardButton(text = '🔵 BANTUAN 🔵', callback_data = "help+2")
+                ]
+            ]
+        ),
+    )
