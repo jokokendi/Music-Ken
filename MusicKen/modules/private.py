@@ -120,7 +120,6 @@ def help_answer(client, callback_query):
         text=tr.HELP_MSG[msg],    reply_markup=InlineKeyboardMarkup(map(msg))
     )
 
-
 def map(pos):
     if(pos==1):
         button = [
@@ -132,6 +131,18 @@ def map(pos):
             [InlineKeyboardButton("➕ Tambahkan saya ke Grup Anda ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             [InlineKeyboardButton(text = '📣 CHANNEL', url=f"https://t.me/{UPDATES_CHANNEL}"),
              InlineKeyboardButton(text = '💬 GROUP', url=f"https://t.me/{SUPPORT_GROUP}")],
+            [InlineKeyboardButton(text = '🛠 CLONE 🛠', url=f"https://{SOURCE_CODE}")],
+            [InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}")]
+        ]
+    else:
+        button = [
+            [
+                InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = '▶️', callback_data = f"help+{pos+1}")
+            ],
+        ]
+    return button
+
 
 @Client.on_message(filters.command("start") & filters.group & ~ filters.edited)
 async def start(client: Client, message: Message):
