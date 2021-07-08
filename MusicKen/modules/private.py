@@ -52,7 +52,7 @@ disable_web_page_preview=True,
         reply_to_message_id=message.message_id
         )
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['help']))
+@Client.on_message(filters.group & ~ filters.edited & filters.private & filters.incoming & filters.command(['help']))
 def _help(client, message):
     client.send_message(chat_id = message.chat.id,
         text = tr.HELP_MSG[1],
@@ -120,22 +120,6 @@ async def start(client: Client, message: Message):
                 ]
             ]
         )
-    )
-
-
-@Client.on_message(
-    filters.command("help")
-    & filters.group
-    & ~ filters.edited
-)
-def _help(client, message):
-    client.send_message(chat_id = message.chat.id,
-        text = tr.HELP_MSG[1],
-        parse_mode="markdown",
-        disable_web_page_preview=True,
-        disable_notification=True,
-        reply_markup = InlineKeyboardMarkup(map(1)),
-        reply_to_message_id = message.message_id
     )
 
 
