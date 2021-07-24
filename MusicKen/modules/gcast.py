@@ -3,7 +3,7 @@ from pyrogram.types import Dialog, Chat, Message
 from pyrogram.errors import UserAlreadyParticipant 
 from MusicKen.config import SUDO_USERS 
 from MusicKen.helpers.filters import command 
-from MusicKen.services.callsmusic.callsmusic import client
+from MusicKen.services.callsmusic.callsmusic import client as USER
 
 @Client.on_message(command("gcast") & filters.user(SUDO_USERS) & ~filters.edited)
 async def gcast(_, message: Message):
