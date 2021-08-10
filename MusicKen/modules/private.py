@@ -44,7 +44,7 @@ disable_web_page_preview=True,
                         "❓ HELP ❓", callback_data = "help+2")
                 ],[
                     InlineKeyboardButton(
-                        "🛠 CLONE 🛠", url=f"https://{SOURCE_CODE}")
+                        "🛠 CLONE 🛠", url=f"https://{SOURCE_CODE}"), InlineKeyboardButton("💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/kenkansaja/tip")
                 ]
             ]
         ),
@@ -81,7 +81,6 @@ def map(pos):
             [InlineKeyboardButton(text = '▶️', callback_data = "help+2")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
-        url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
             [InlineKeyboardButton("➕ Tambahkan saya ke Grup Anda ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             [InlineKeyboardButton(text = '📣 CHANNEL', url=f"https://t.me/{UPDATES_CHANNEL}"),
@@ -105,13 +104,9 @@ async def start(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [   
                 [    
-                    InlineKeyboardButton(
-                        "✅ Ya", switch_inline_query_current_chat=""
-                    ),
-                    InlineKeyboardButton(
-                        "❌ Tidak ", callback_data="close"
-                    )
-                ]
+                    InlineKeyboardButton("✅ Ya", switch_inline_query_current_chat=""),
+                    InlineKeyboardButton("❌ Tidak ", callback_data="close")],
+                   [InlineKeyboardButton("💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/kenkansaja/tip")]
             ]
         )
     )
@@ -125,28 +120,24 @@ async def start(client: Client, message: Message):
 async def reload(client: Client, message: Message):
     await message.reply_text("""✅ Bot **berhasil dimulai ulang!**\n\n• **Daftar admin** telah **diperbarui**""",
       reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "💬 GROUP", url=f"https://t.me/{SUPPORT_GROUP}"
-                    ),
-                    InlineKeyboardButton(
-                        "OWNER 👮", url=f"https://t.me/kenkanasw"
-                    )
+                  [
+                    [InlineKeyboardButton(text = '🔵 ᴏᴡɴᴇʀ', url = f"t.me/{OWNER}")],
+                    [InlineKeyboardButton(text = '👥 ɢʀᴏᴜᴘ', url=f"https://t.me/{SUPPORT_GROUP}"),
+                     InlineKeyboardButton(text = 'ᴄʜᴀɴɴᴇʟ 📣', url=f"https://t.me/{UPDATES_CHANNEL}")],
+                    [InlineKeyboardButton("🌟 ɢɪᴛ ʜᴜʙ 🌟", url=f"{SOURCE_CODE}"), InlineKeyboardButton("💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/kenkansaja/tip")]
                 ]
-            ]
-        )
+        ),
    )
 @Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
         text=tr.HELP_MSG[2],
         reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(text = '💬 GROUP 💬', url = f"t.me/{SUPPORT_GROUP}"),
-                    InlineKeyboardButton(text = '💌 CHANNEL 💌', url = f"t.me/{UPDATES_CHANNEL}")
+                  [
+                    [InlineKeyboardButton(text = '🔵 ᴏᴡɴᴇʀ', url = f"t.me/{OWNER}")],
+                    [InlineKeyboardButton(text = '👥 ɢʀᴏᴜᴘ', url=f"https://t.me/{SUPPORT_GROUP}"),
+                     InlineKeyboardButton(text = 'ᴄʜᴀɴɴᴇʟ 📣', url=f"https://t.me/{UPDATES_CHANNEL}")],
+                    [InlineKeyboardButton("🌟 ɢɪᴛ ʜᴜʙ 🌟", url=f"{SOURCE_CODE}"), InlineKeyboardButton("💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/kenkansaja/tip")]
                 ]
-            ]
         ),
     )
