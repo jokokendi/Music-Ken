@@ -1,9 +1,9 @@
 {
-  "name": "Music Ken",
+  "name": "Brocoli",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by MUSIK KU.",
-  "logo": "https://telegra.ph/file/b0abf1b9bec33146e4288.jpg",
+  "logo": "https://telegra.ph/file/c1715dedc403ebf896e57.png",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/jokokendi/Music-Ken",
+  "repository": "https://github.com/syahrizalemano/Brocoli.git",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
